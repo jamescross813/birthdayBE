@@ -1,5 +1,7 @@
 package dto;
 
+import entity.People;
+
 public class PeopleDTO {
     int id;
     String name;
@@ -57,4 +59,10 @@ public class PeopleDTO {
                 ", imgURL='" + imgURL + '\'' +
                 '}';
     }
+
+    public People createEntity(){
+        People peop = new People();
+        return peop;
+    }
+
 }
