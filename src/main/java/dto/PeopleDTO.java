@@ -62,6 +62,12 @@ public class PeopleDTO {
 
     public People createEntity(){
         People peop = new People();
+        peop.setId(this.getId());
+        peop.setName(this.getName());
+        peop.setAge(this.getAge());
+        peop.setDob(this.getDob());
+        peop.setImgURL(this.getImgURL());
+
         return peop;
     }
 
