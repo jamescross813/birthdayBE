@@ -10,8 +10,8 @@ public class People {
     private int id;
     private String name;
     private int age;
-    private String date;
-    private String imgUrl;
+    private String dob;
+    private String imgURL;
 
     public int getId() {
         return id;
@@ -37,20 +37,20 @@ public class People {
         this.age = age;
     }
 
-    public String getDate() {
-        return date;
+    public String getDob() {
+        return dob;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
+    public String getImgURL() {
+        return imgURL;
     }
 
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
+    public void setImgURL(String imgURL) {
+        this.imgURL = imgURL;
     }
 
     @Override
@@ -58,12 +58,12 @@ public class People {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         People people = (People) o;
-        return id == people.id && age == people.age && name.equals(people.name) && date.equals(people.date) && imgUrl.equals(people.imgUrl);
+        return id == people.id && age == people.age && Objects.equals(name, people.name) && Objects.equals(dob, people.dob) && Objects.equals(imgURL, people.imgURL);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, age, date, imgUrl);
+        return Objects.hash(id, name, age, dob, imgURL);
     }
 
     @Override
@@ -72,8 +72,8 @@ public class People {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", date='" + date + '\'' +
-                ", imgUrl='" + imgUrl + '\'' +
+                ", dob='" + dob + '\'' +
+                ", imgURL='" + imgURL + '\'' +
                 '}';
     }
 }
