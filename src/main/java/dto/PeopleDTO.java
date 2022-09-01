@@ -46,4 +46,15 @@ public class PeopleDTO {
     public void setImgURL(String imgURL) {
         this.imgURL = imgURL;
     }
+
+    @Override
+    public String toString() {
+        return "PeopleDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", dob='" + dob + '\'' +
+                ", imgURL='" + imgURL + '\'' +
+                '}';
+    }
 }
