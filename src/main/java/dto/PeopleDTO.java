@@ -2,6 +2,8 @@ package dto;
 
 import entity.People;
 
+import java.util.Date;
+
 public class PeopleDTO {
     int id;
     String name;
@@ -30,7 +32,15 @@ public class PeopleDTO {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if(age==0 || age.equals(null)){
+            String birthyr = this.dob.toString().substring(0, 3);
+            Date today = new Date();
+            String thisyr = String.valueOf(today.getYear());
+            this.age = pareInt(thisyr) - birthyr;
+        }
+        else{
+            this.age = age;
+        }
     }
 
     public String getDob() {
