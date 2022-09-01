@@ -32,11 +32,11 @@ public class PeopleDTO {
     }
 
     public void setAge(int age) {
-        if(age==0 || age.equals(null)){
+        if(age==0){
             String birthyr = this.dob.toString().substring(0, 3);
             Date today = new Date();
             String thisyr = String.valueOf(today.getYear());
-            this.age = pareInt(thisyr) - birthyr;
+            this.age = Integer.parseInt(thisyr) - Integer.parseInt(birthyr);
         }
         else{
             this.age = age;
