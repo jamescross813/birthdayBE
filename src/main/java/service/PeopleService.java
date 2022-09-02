@@ -22,7 +22,9 @@ public class PeopleService {
     public List<PeopleDTO> getListOfBirthdays(String date){
         List<PeopleDTO> peopDTO = new ArrayList();
         Iterable<People> peops = peopleRepo.findAllByDobIsContaining(date);
-
+        for(People peop : peops ){
+//            convert peop to peopDTO
+        }
         return null;
     }
 
