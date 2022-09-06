@@ -24,8 +24,14 @@ public class PeopleService {
         Iterable<People> peops = peopleRepo.findAllByDobIsContaining(date);
         for(People peop : peops ){
             PeopleDTO peopDTO = new PeopleDTO();
+            peopDTO.setAge(peop.getAge());
+            peopDTO.setDob(peopDTO.getDob());
+            peopDTO.setName(peop.getName());
+            peopDTO.setImgURL(peop.getImgURL());
+            peopDTO.setId(peop.getId());
+            peopDTOs.add(peopDTO);
         }
-        return null;
+        return peopDTOs;
     }
 
 }
