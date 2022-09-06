@@ -20,10 +20,10 @@ public class PeopleService {
     PeopleRepository peopleRepo;
 
     public List<PeopleDTO> getListOfBirthdays(String date){
-        List<PeopleDTO> peopDTO = new ArrayList();
+        List<PeopleDTO> peopDTOs = new ArrayList();
         Iterable<People> peops = peopleRepo.findAllByDobIsContaining(date);
         for(People peop : peops ){
-//            convert peop to peopDTO
+            PeopleDTO peopDTO = new PeopleDTO();
         }
         return null;
     }
