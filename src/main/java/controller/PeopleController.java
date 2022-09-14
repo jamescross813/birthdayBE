@@ -26,4 +26,6 @@ public class PeopleController {
         Date today = new Date();
         return peopService.getListOfBirthdays(today.toString());
     }
+
+//    need to include add , edit, delete and show individual birthdays
 }
